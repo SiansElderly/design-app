@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Spinner, Alert, Button } from 'react-bootstrap';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -13,7 +13,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 export function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="d-flex flex-column min-vh-100">
         <Header />
         <AppNavbar />
@@ -36,7 +36,7 @@ export function AppRouter() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

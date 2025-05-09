@@ -6,7 +6,6 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
-  // Фикс пути для mock-режима
   const imageUrl = service.screenshot 
     ? service.screenshot.startsWith('/') 
       ? `${import.meta.env.BASE_URL}${service.screenshot}` 
@@ -21,7 +20,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         alt={service.name}
         style={{ height: '200px', objectFit: 'cover' }}
         onError={(e) => {
-          (e.target as HTMLImageElement).src = '/default-service.jpg';
+          (e.target as HTMLImageElement).src = `${import.meta.env.BASE_URL}default-service.jpg`;
         }}
       />
       <Card.Body className="d-flex flex-column bg-primary-light">
