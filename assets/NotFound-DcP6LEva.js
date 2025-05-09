@@ -1,0 +1,1 @@
+import{d as e,j as a,a as n,B as t}from"./index-BC5PDgd3.js";function i(){const s=e();return a.jsx(a.Fragment,{children:a.jsxs(n,{className:"text-center py-5",children:[a.jsx("h1",{className:"display-1",children:"404"}),a.jsx("p",{className:"lead",children:"Страница не найдена"}),a.jsx(t,{variant:"primary",onClick:()=>s("/"),children:"На главную"})]})})}export{i as default};
